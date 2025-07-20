@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW ID LOGIN</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a {
+            text-decoration: none;
+        }
+
+        .bmw-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .nav-icons i, .nav-icons a {
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-icons i:hover, .nav-icons a:hover {
+            color: #0066cc;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            min-height: calc(100vh - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .login-header {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .login-logo {
+            font-size: 32px;
+            font-weight: 300;
+            color: #0066cc;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .register-link {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #0066cc;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #d0d0d0;
+            border: none;
+            font-size: 16px;
+            color: #666;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .continue-btn:hover {
+            background-color: #c0c0c0;
+        }
+
+        .continue-btn.active {
+            background-color: #0066cc;
+            color: white;
+        }
+
+        .captcha-notice {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+
+        .captcha-notice a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        /* Help Section */
+        .help-section {
+            background-color: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #0066cc;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .help-section h3 {
+            color: #0066cc;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .help-section p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .help-links {
+            list-style: none;
+        }
+
+        .help-links li {
+            margin-bottom: 8px;
+        }
+
+        .help-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .help-links a:hover {
+            text-decoration: underline;
+        }
+
+        .help-links a::before {
+            content: "→";
+            margin-right: 8px;
+            color: #0066cc;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #666;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Footer Styles */
+        .bmw-footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0 1rem;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #0066cc;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #0066cc;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .login-logo {
+                font-size: 28px;
+            }
+
+            .help-section {
+                padding: 20px;
+                margin: 20px -20px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="home.html">
+                    <div class="bmw-logo">
+                        <img src="download (11).jpg" alt="BMW Logo" />
+                    </div>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="model.html">Models</a></li>
+                <li><a href="electric.html">Electric</a></li>
+                <li><a href="collection.html">Collection</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a class="fa-regular fa-user" href="user.html"></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="login-header">
+                <h1 class="login-logo">BMW ID LOGIN</h1>
+                <p class="register-link">Don't have a BMW ID? Register <a href="#">here.</a></p>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="email">BMW ID (email address)</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <button type="submit" class="continue-btn">Continue</button>
+                
+                <p class="captcha-notice">
+                    This page uses hCaptcha. For more details, please check either 
+                    <a href="#">Data Privacy</a> or <a href="#">Legal Notice</a>.
+                </p>
+            </div>
+
+            <!-- Help Section -->
+            <div class="help-section">
+                <h3>Need Help?</h3>
+                <p>Having trouble accessing your BMW ID account? We're here to help you get back on track.</p>
+                <ul class="help-links">
+                    <li><a href="#">Forgot your password?</a></li>
+                    <li><a href="#">Account locked or suspended?</a></li>
+                    <li><a href="#">Contact customer support</a></li>
+                    <li><a href="#">BMW ID registration guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Legal Notice</a>
+                <a href="#">Data Privacy</a>
+                <a href="#">Display Mode</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bmw-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Find a Dealer</a></li>
+                    <li><a href="#">Request a Test Drive</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Build your BMW</a></li>
+                    <li><a href="#">BMW Financial Services</a></li>
+                    <li><a href="#">BMW Safety</a></li>
+                    <li><a href="#">BMW Premium Selection (Used Cars)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Experience BMW</h4>
+                <ul>
+                    <li><a href="#">BMW Group</a></li>
+                    <li><a href="#">BMW Excellence Club</a></li>
+                    <li><a href="#">BMW Motorrad</a></li>
+                    <li><a href="#">Charging Network</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Legal Disclaimer/Imprint</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="download (9).jpeg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="download (10).jpeg" alt="Instagram"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="download 11.png" alt="YouTube"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="download (1).png" alt="LinkedIn"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="download.png" alt="Twitter"></a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 BMW Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation and interaction
+        document.querySelector('.continue-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            if (!email) {
+                alert('Please enter your BMW ID (email address)');
+                return;
+            }
+            
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Simulate form submission
+            this.textContent = 'Processing...';
+            this.classList.add('active');
+            
+            setTimeout(() => {
+                alert('Login form submitted successfully!');
+                this.textContent = 'Continue';
+                this.classList.remove('active');
+            }, 2000);
+        });
+
+        // Email field validation - update button state
+        document.getElementById('email').addEventListener('input', function() {
+            const continueBtn = document.querySelector('.continue-btn');
+            if (this.value.includes('@')) {
+                continueBtn.classList.add('active');
+            } else {
+                continueBtn.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for navigation links (if needed)
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>

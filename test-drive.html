@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMW Electric Cars</title>
+    
+    
+</head>
+<body>
+
+<header class="header">
+     <nav class="nav">
+     <div class="logo">
+              <a href="home.html">
+                <div class="bmw-logo">
+                    <img src="download (11).jpg" alt="" />
+                </div>
+               </a>
+     </div>
+    <ul class="nav-links">
+        <li><a href="model.html">Models</a></li>
+        <li><a href="electric.html">Electric</a></li>
+        <li><a href="collection.html">Collection</a></li>
+    </ul>
+    
+     
+     <div class="nav-icons">
+            <a class="fa-regular fa-user" href="user.html"></a>
+            
+        </div>
+     </nav>
+</header>
+ <div class="con">
+        <h1>Which vehicle would you like to test drive?</h1>
+        <p class="intro-text">
+            Complete your details below and your BMW Dealer will be in touch shortly to arrange a test drive.
+        </p>
+        <p class="mandatory-note"><span class="required">*</span> Mandatory fields</p>
+
+        <form id="testDriveForm">
+            <!-- Vehicle Selection Section -->
+            <div class="section">
+                <div class="form-group">
+                    <label for="series">Series<span class="required">*</span></label>
+                    <select id="series" name="series" required>
+                        <option value="">Select Series</option>
+                        <option value="1-series">1 Series</option>
+                        <option value="2-series">2 Series</option>
+                        <option value="3-series">3 Series</option>
+                        <option value="4-series">4 Series</option>
+                        <option value="5-series">5 Series</option>
+                        <option value="7-series">7 Series</option>
+                        <option value="x-series">X Series</option>
+                        <option value="z-series">Z Series</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="model">Model<span class="required">*</span></label>
+                    <select id="model" name="model" required>
+                        <option value="">Select Model</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="coupe">Coupe</option>
+                        <option value="convertible">Convertible</option>
+                        <option value="suv">SUV</option>
+                        <option value="hatchback">Hatchback</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contact Details Section -->
+            <div class="section">
+                <h3 class="section-title">Contact details</h3>
+                
+                <div class="form-group">
+                    <label>Salutation<span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="mr" name="salutation" value="mr" required>
+                            <label for="mr">Mr</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="ms" name="salutation" value="ms" required>
+                            <label for="ms">Ms</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">First Name<span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name<span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number <span class="required">*</span></label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+            </div>
+
+            <!-- Location Section -->
+            <div class="section">
+                <h3 class="section-title">Please select your current city</h3>
+                <div class="form-group">
+                    <label for="city">City<span class="required">*</span></label>
+                    <select id="city" name="city" required>
+                        <option value="">Select City</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="pune">Pune</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- New Test Drive Preferences Section -->
+            <div class="section">
+                <div class="preference-section">
+                    <h3 class="section-title">Test Drive Preferences</h3>
+                    
+                    <div class="preference-grid">
+                        <div class="form-group">
+                            <label for="preferredDate">Preferred Date<span class="required">*</span></label>
+                            <input type="date" id="preferredDate" name="preferredDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dealerLocation">Preferred Dealer Location</label>
+                            <select id="dealerLocation" name="dealerLocation">
+                                <option value="">Select Dealer</option>
+                                <option value="central">Central BMW</option>
+                                <option value="north">North BMW</option>
+                                <option value="south">South BMW</option>
+                                <option value="east">East BMW</option>
+                                <option value="west">West BMW</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Time Slot</label>
+                        <div class="time-slots">
+                            <div class="time-slot" data-time="9-11">9:00 AM - 11:00 AM</div>
+                            <div class="time-slot" data-time="11-13">11:00 AM - 1:00 PM</div>
+                            <div class="time-slot" data-time="13-15">1:00 PM - 3:00 PM</div>
+                            <div class="time-slot" data-time="15-17">3:00 PM - 5:00 PM</div>
+                            <div class="time-slot" data-time="17-19">5:00 PM - 7:00 PM</div>
+                            <div class="time-slot" data-time="weekend">Weekend Only</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests or Comments</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any specific requirements or questions about the test drive..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financing Section -->
+            <div class="section">
+                <h3 class="section-title">I am interested in</h3>
+                <p style="color: #666; font-size: 14px; margin-bottom: 15px;">FINANCING</p>
+                
+                <div class="financing-options">
+                    <div class="financing-item">
+                        <input type="checkbox" id="notInterested" name="financing" value="not-interested">
+                        <span>Not Interested</span>
+                    </div>
+                    <div class="financing-item">
+                        <input type="checkbox" id="loanOptions" name="financing" value="loan-options">
+                        <span>Loan Options</span>
+                    </div>
+                    <div class="financing-item">
+                        <input type="checkbox" id="leaseOptions" name="financing" value="lease-options">
+                        <span>Lease Options</span>
+                    </div>
+                    <div class="financing-item">
+                        <input type="checkbox" id="insurance" name="financing" value="insurance">
+                        <span>Insurance Options</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="section">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="checkbox-label">
+                        I accept the <a href="#" target="_blank">Terms and Conditions</a>.<span class="required">*</span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter" class="checkbox-label">
+                        I would like to receive BMW newsletters and promotional offers.
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+    </div>
+
+    <script>
+        // Time slot selection
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Form submission
+        document.getElementById('testDriveForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#e74c3c';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+
+            if (isValid) {
+                const submitBtn = document.querySelector('.submit-btn');
+                submitBtn.textContent = 'Processing...';
+                submitBtn.style.backgroundColor = '#28a745';
+                
+                setTimeout(() => {
+                    alert('Test drive request submitted successfully! A BMW representative will contact you shortly.');
+                    submitBtn.textContent = 'Submit Request';
+                    submitBtn.style.backgroundColor = '#0066cc';
+                }, 2000);
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Real-time validation
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.hasAttribute('required') && this.value.trim()) {
+                    this.style.borderColor = '#28a745';
+                }
+            });
+        });
+
+        // Set minimum date to today
+        document.getElementById('preferredDate').min = new Date().toISOString().split('T')[0];
+    </script>
+<footer class="bmw-footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="#">Find a Dealer</a></li>
+                <li><a href="#">Request a Test Drive</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Build your BMW</a></li>
+                <li><a href="#">BMW Financial Services</a></li>
+                <li><a href="#">BMW Safety</a></li>
+                <li><a href="#">BMW Premium Selection (Used Cars)</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Experience BMW</h4>
+            <ul>
+                <li><a href="#">BMW Group</a></li>
+                <li><a href="#">BMW Excellence Club</a></li>
+                <li><a href="#">BMW Motorrad</a></li>
+                <li><a href="#">Charging Network</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Legal Disclaimer/Imprint</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="download (9).jpeg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="download (10).jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="download 11.png" alt="YouTube"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="download (1).png" alt="LinkedIn"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="download.png" alt="Twitter"></a>
+    </div>
+    <div class="copyright">
+        <a href="#"></a>
+    </div>
+</footer>
+
+</body>
+</html>

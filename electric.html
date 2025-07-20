@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMW Electric Cars</title>
+    
+    
+</head>
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="home.html">
+                <div class="bmw-logo">
+                    <img src="download (11).jpg" alt="BMW Logo" />
+                </div>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="model.html" onclick="scrollToSection('cars')">Models</a></li>
+            <li><a href="electric.html" onclick="scrollToSection('container')">Electric</a></li>
+            <li><a href="collection.html">Collection</a></li>
+        </ul>
+
+        <!-- ICONS NAV SECTION -->
+        <div class="nav-icons">
+            <a class="fa-regular fa-user" href="user.html"></a>
+          
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>BMW ELECTRIC CARS</h1>
+        <a href="#" class="btn">Book a Test Drive</a>
+    </div>
+</div>
+
+<!-- BMW i5 -->
+<section class="container" id="container">
+    <div class="model-section">THE BMW i5</div>
+    <div class="model-content">
+        <div class="model-image">
+            <img src="download(18).jpg" alt="BMW i5">
+        </div>
+        <div class="model-text">
+            <h2>THE BMW i5</h2>
+            <p>Drive into a world where the ingenuity of BMW i and the power of BMW M connect. Introducing the first-ever BMW i5 M60, a 100% electric marvel that isn't just a car, but an experience engineered for unbridled excitement and unparalleled thrills.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BMW iX -->
+<section class="container">
+    <div class="model-section">THE BMW iX</div>
+    <div class="model-content reverse">
+        <div class="model-image">
+            <img src="download(20).jpg" alt="BMW iX">
+        </div>
+        <div class="model-text">
+            <h2>THE BMW iX</h2>
+            <p>The all-electric BMW iX xDrive50 is a first of its kind in a future-oriented generation of automobiles. With fully-electric driving pleasure and newly-developed, precise and minimalist monolithic design, the all-electric BMW iX xDrive50 is a vision turned into reality.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Electric Car Section -->
+<section class="electric">
+    <div class="model-section">FIND YOUR BMW ELECTRIC CAR</div>
+
+    <div class="main-electric">
+
+        <div class="info-box">
+            <h2>THE iX1 LWB</h2>
+            <ul>
+                <a>Up to 531 km electric range in accordance with MIDC.</a><br>
+                <a>Recharging for 10 min* can add up to 120 km* (high-power charging station).</a><br>
+                <a>Power Consumption per 100km (MIDC, kWh): 15.5.</a>
+            </ul>
+        </div>
+
+        <div class="side-section">
+            <div class="side-menu">
+                <ul>
+                    <li class="active">THE iX1 LWB.</li>
+                    <li>THE iX</li>
+                    <li>THE i4.</li>
+                    <li>THE i7.</li>
+                    <li>THE i5.</li>
+                </ul>
+            </div>
+
+            <div class="side-image">
+                <img src="images (4).jpg" alt="BMW Electric Car">
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="experience-section">
+    <h2>EXPERIENCE THE BMW iX</h2>
+
+    <div class="carousel">
+        <!-- Video Slide -->
+        <div class="carousel-item">
+            <img src="download.jpg" alt="BMW Interior" onclick="playVideo('bmw.video.mp4')">
+            <div class="play-icon" onclick="playVideo('bmw.video.mp4')">&#9658;</div>
+        </div>
+
+        <!-- Image Slide -->
+        <div class="carousel-item">
+            <img src="images (1).jpg" alt="BMW Dashboard">
+        </div>
+
+        <!-- Image Slide -->
+        <div class="carousel-item">
+            <img src="images.jpg" alt="BMW Front View">
+        </div>
+    </div>
+
+    <!-- Hidden Video Player -->
+    <div class="video-player" id="videoPlayer" style="display: none;">
+        <video id="bmwVideo" controls autoplay>
+            <source id="videoSource" src="" type="video/mp4">        </video>
+        <span class="close-btn" onclick="closeVideo()">x</span>
+    </div>
+</section>
+
+ <footer class="bmw-footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="#">Find a Dealer</a></li>
+                <li><a href="#">Request a Test Drive</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Build your BMW</a></li>
+                <li><a href="#">BMW Financial Services</a></li>
+                <li><a href="#">BMW Safety</a></li>
+                <li><a href="#">BMW Premium Selection (Used Cars)</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Experience BMW</h4>
+            <ul>
+                <li><a href="#">BMW Group</a></li>
+                <li><a href="#">BMW Excellence Club</a></li>
+                <li><a href="#">BMW Motorrad</a></li>
+                <li><a href="#">Charging Network</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Legal Disclaimer/Imprint</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="download (9).jpeg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="download (10).jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="download 11.png" alt="YouTube"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="download (1).png" alt="LinkedIn"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="download.png" alt="Twitter"></a>
+    </div>
+    <div class="copyright">
+        <a href="#"></a>
+    </div>
+</footer>
+
+<script>
+    function playVideo(videoFile) {
+        var videoPlayer = document.getElementById('videoPlayer');
+        var video = document.getElementById('bmwVideo');
+        var source = document.getElementById('videoSource');
+
+        source.src = videoFile; // Set video file
+        video.load(); // Reload video with new source
+        video.play(); // Start playing
+        videoPlayer.style.display = 'flex'; // Show the video player
+    }
+
+    function closeVideo() {
+        var videoPlayer = document.getElementById('videoPlayer');
+        var video = document.getElementById('bmwVideo');
+
+        video.pause(); // Pause the video
+        video.currentTime = 0; // Reset to start
+        videoPlayer.style.display = 'none'; // Hide the player
+    }
+</script>
+</body>
+</html>

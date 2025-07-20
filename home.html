@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="style.css">
+    
+    <title>BMW Collection</title>
+</head>
+<body>
+    <!-- Header -->
+   <!-- Add this in your <head> section -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Header HTML -->
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="home.html">
+                <div class="bmw-logo">
+                    <img src="download (11).jpg" alt="BMW Logo" />
+                </div>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="model.html" onclick="scrollToSection('cars')">Models</a></li>
+            <li><a href="electric.html" onclick="scrollToSection('container')">Electric</a></li>
+            <li><a href="collection.html">Collection</a></li>
+        </ul>
+
+        <!-- ICONS NAV SECTION -->
+        <div class="nav-icons">
+            <a class="fa-regular fa-user" href="user.html"></a>
+          
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="bmwi4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+        <h1>The <span>Ultimate Driving Machine</span></h1>
+        <p>Experience the perfect fusion of luxury, performance, and innovation</p>
+        <a href="model.html" class="btn">Explore Models</a>
+    </div>
+</section>
+
+
+ 
+ <!-- Video Section -->
+<section class="video-section">
+    <h2 class="section-title">Experience BMW</h2>
+    <div class="video-container">
+        <!-- Video Element -->
+        <video id="bmwVideo" width="100%"  style="display: none;" controls>
+            <source src="bmwi4.mp4" type="video/mp4">
+        </video>
+
+        <!-- Video Placeholder with BMW Background -->
+        <div class="video-placeholder" id="videoOverlay" onclick="playVideo()" style="background-image: url('download (11).jpeg'); background-size: cover; background-position: center;">
+            <div class="play-button"></div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Cars Section -->
+    <section class="cars-section" id="cars">
+        <h2 class="section-title">Our Models</h2>
+        <div class="cars-grid">
+            <!-- BMW 3 Series -->
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="download (13).jpg" class="image">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">BMW 3 Series</h3>
+                    <p class="car-desc">The perfect balance of sportiness and elegance. Dynamic performance meets premium comfort.</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <div class="spec-value">248</div>
+                            <div class="spec-label">HP</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-value">5.6</div>
+                            <div class="spec-label">0-60 mph</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-value">36</div>
+                            <div class="spec-label">MPG</div>
+                        </div>
+                    </div>
+                    <!-- <div class="car-price">Starting at $41,250</div> -->
+                    <button class="configure-btn"><a href="bmw-3.html"> Build & Price</a></button>
+                </div>
+            </div>
+
+            
+            <!-- BMW i4 -->
+            <div class="car-card">
+                <div class="car-image">
+                     <div class="car-image" >
+                     <img src="download (7).jpeg" alt="" class="image"/>
+                </div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">BMW M5</h3>
+                    <p class="car-desc">Electric performance redefined. Zero emissions with maximum driving pleasure.</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <div class="spec-value">536</div>
+                            <div class="spec-label">HP</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-value">3.7</div>
+                            <div class="spec-label">0-60 mph</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-value">270</div>
+                            <div class="spec-label">Miles Range</div>
+                        </div>
+                    </div>
+                    <!-- <div class="car-price">Starting at $56,400</div> -->
+                    <button class="configure-btn"><a href="BMW-m5.html"> Build & Price</a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 -->
+            <div class="car-card">
+                <div class="car-image">
+                       <img src="download (16).jpg" alt="" class="image"/>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">BMW M4</h3>
+                    <p class="car-desc">Pure motorsport DNA. Track-bred performance for the ultimate driving experience.</p>
+                    <div class="car-specs">
+                        <div class="spec">
+                            <div class="spec-value">473</div>
+                            <div class="spec-label">HP</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-value">4.1</div>
+                            <div class="spec-label">0-60 mph</div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-value">180</div>
+                            <div class="spec-label">Top Speed</div>
+                        </div>
+                    </div>
+                    <!-- <div class="car-price">Starting at $73,400</div> -->
+                    <button class="configure-btn"><a href="bmw-m.html"> Build & Price</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hero-section">
+    <div class="hero-content">
+        <h1>BMW ELECTRIC CARS</h1>
+        <a href="test-drive.html" class="btn">Book a Test Drive</a>
+    </div>
+</div>
+
+<!-- BMW i5 -->
+<section class="container" id="container">
+    <div class="model-section">THE BMW i5</div>
+    <div class="model-content">
+        <div class="model-image">
+            <img src="download(18).jpg" alt="BMW i5">
+        </div>
+        <div class="model-text">
+            <h2>THE BMW i5</h2>
+            <p>Drive into a world where the ingenuity of BMW i and the power of BMW M connect. Introducing the first-ever BMW i5 M60, a 100% electric marvel that isn't just a car, but an experience engineered for unbridled excitement and unparalleled thrills.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BMW iX -->
+<section class="container">
+    <div class="model-section">THE BMW iX</div>
+    <div class="model-content reverse">
+        <div class="model-image">
+            <img src="download(20).jpg" alt="BMW iX">
+        </div>
+        <div class="model-text">
+            <h2>THE BMW iX</h2>
+            <p>The all-electric BMW iX xDrive50 is a first of its kind in a future-oriented generation of automobiles. With fully-electric driving pleasure and newly-developed, precise and minimalist monolithic design, the all-electric BMW iX xDrive50 is a vision turned into reality.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Electric Car Section -->
+<section class="electric">
+    <div class="model-section">FIND YOUR BMW ELECTRIC CAR</div>
+
+    <div class="main-electric">
+
+        <div class="info-box">
+            <h2>THE iX1 LWB</h2>
+            <ul>
+                <a>Up to 531 km electric range in accordance with MIDC</a><br>
+                <a>Recharging for 10 min* can add up to 120 km* (high-power charging station)</a><br>
+                <a>Power Consumption per 100km (MIDC, kWh): 15.5</a>
+            </ul>
+        </div>
+
+        <div class="side-section">
+            <div class="side-menu">
+                <ul>
+                    <li class="active">THE iX1 LWB.</li>
+                    <li>THE iX</li>
+                    <li>THE i4.</li>
+                    <li>THE i7.</li>
+                    <li>THE i5.</li>
+                </ul>
+            </div>
+
+            <div class="side-image">
+                <img src="images (4).jpg" alt="BMW Electric Car">
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="experience-section">
+    <h2>EXPERIENCE THE BMW iX</h2>
+
+    <div class="carousel">
+        <!-- Video Slide -->
+        <div class="carousel-item">
+            <img src="download.jpg" alt="BMW Interior" onclick="playVideo('bmw.video.mp4')">
+            <div class="play-icon" onclick="playVideo('bmw.video.mp4')">&#9658;</div>
+        </div>
+
+        <!-- Image Slide -->
+        <div class="carousel-item">
+            <img src="images (1).jpg" alt="BMW Dashboard">
+        </div>
+
+        <!-- Image Slide -->
+        <div class="carousel-item">
+            <img src="images.jpg" alt="BMW Front View">
+        </div>
+    </div>
+
+    <!-- Hidden Video Player -->
+    <div class="video-player" id="videoPlayer" style="display: none;">
+        <video id="bmwVideo" controls autoplay>
+            <source id="videoSource" src="" type="video/mp4">        </video>
+        <span class="close-btn" onclick="closeVideo()">x</span>
+    </div>
+</section>
+<section class="coupe-section">
+     <ul class="nav-links">
+                <li><a  href="coupe.html" onclick="" >Coupe</a></li>
+                <li><a href="sedan.html" onclick="scrollToSection('container')">Sedan</a></li>
+                <li><a href="roadster.html">Roadster</a></li>
+                <li><a href="sport.html">Sports Activity Vehicle</a></li>
+            </ul> 
+       <h2 class="section-title">BMW Coupe Collection</h2>
+        
+        <div class="cars-grid">
+            <!-- BMW M8 Competition -->
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m8">
+                           <img src="download (1).jpeg">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">The BMW M8 Competition Coupé</h3>
+                    <p class="fuel-type">Petrol</p>
+                    <p class="price">Starting from ₹ 2,44,00,000</p>
+                    <button class="configure-btn"><a href="bmw-m8.html"> Build & Price</a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 Competition -->
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="download (2).jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">The New BMW M4 Competition Coupé with M xDrive</h3>
+                    <p class="fuel-type">Petrol</p>
+                    <p class="price">Starting from ₹ 1,56,00,000</p>
+                      <button class="configure-btn"><a href="bmw-m4.html"> Build & Price</a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 CS -->
+           <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="images.jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                   
+                    <h3 class="car-name">The BMW M4 CS </h3>
+                    <p class="fuel-type">Petrol</p>
+                    <p class="price">Starting from ₹ 1,89,00,000</p>
+                    <button class="configure-btn"><a href="bmw-4s.html"> Build & Price</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+      <section class="coupe-section">
+       <h2 class="section-title">Roadster</h2>
+        
+        <div class="cars-grid">
+           
+
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="images (2).jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name"> BMW Z4 </h3>
+                    <p class="fuel-type">Petrol</p>
+                    <p class="price">Starting from ₹ 92,00,000</p>
+                      <button class="configure-btn"><a href="bmw-z4.html"> Build & Price</a></button>
+                </div>
+            </div>
+
+            
+    </section>
+    <section class="coupe-section">
+       <h2 class="section-title">Sports Activity Vehicle</h2>
+        
+        <div class="cars-grid">
+            <!-- BMW M8 Competition -->
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m8">
+                           <img src="download (3).jpeg">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">BMW XM</h3>
+                    <p class="fuel-type">Plugin-in hybrid Electric</p>
+                    <p class="price">Starting from ₹ 2,60,00,000</p>
+                    <button class="configure-btn"><a href="BMW-XM.html"> Build & Price </a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 Competition -->
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="download (4).jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">BMW X1</h3>
+                    <p class="fuel-type">Petrol Diesel</p>
+                    <p class="price">Starting from ₹ 50,80,000</p>
+                     <button class="configure-btn"><a href="BMW-X1.html"> Build & Price </a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 CS -->
+           <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="download (5).jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                   
+                    <h3 class="car-name">BMW X5</h3>
+                    <p class="fuel-type">Petrol</p>
+                    <p class="price">Starting from ₹ 97,80,000</p>
+                      <button class="configure-btn"><a href="bmw-x5.html"> Build & Price </a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="coupe-section">
+       <h2 class="section-title">Sedan</h2>
+        
+        <div class="cars-grid">
+            <!-- BMW M8 Competition -->
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m8">
+                           <img src="download (6).jpeg">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">THE FULLY ELECTRIC  BMW i4</h3>
+                    <p class="fuel-type">Full-Electric</p>
+                    <p class="price">Starting from ₹ 72,50,000</p>
+                    <button class="configure-btn"><a href="BMW-i4.html">Build & Price  </a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 Competition -->
+            <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="images (1).jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                    <h3 class="car-name">THE BMW 7 SERIES SEDAN </h3>
+                    <p class="fuel-type">Petrol Diesel</p>
+                    <p class="price">Starting from ₹ 1,84,20,000</p>
+                      <button class="configure-btn"><a href="BMW-7.html"> Build & Price </a></button>
+                </div>
+            </div>
+
+            <!-- BMW M4 CS -->
+           <div class="car-card">
+                <div class="car-image-container">
+                    <div class="car-visual bmw-m4-comp">
+                        <img src="download (7).jpeg" alt="">
+                        <div class="accent-line"></div>
+                    </div>
+                    <div class="new-badge">New</div>
+                </div>
+                <div class="car-info">
+                   
+                    <h3 class="car-name">BMW M5</h3>
+                    <p class="fuel-type">Petrol</p>
+                    <p class="price">Starting from ₹ 1,99,80,000</p>
+                         <button class="configure-btn"><a href="BMW-m5.html"> Build & Price</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+   <footer class="bmw-footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="#">Find a Dealer</a></li>
+                <li><a href="#">Request a Test Drive</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Build your BMW</a></li>
+                <li><a href="#">BMW Financial Services</a></li>
+                <li><a href="#">BMW Safety</a></li>
+                <li><a href="#">BMW Premium Selection (Used Cars)</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Experience BMW</h4>
+            <ul>
+                <li><a href="#">BMW Group</a></li>
+                <li><a href="#">BMW Excellence Club</a></li>
+                <li><a href="#">BMW Motorrad</a></li>
+                <li><a href="#">Charging Network</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Legal Disclaimer/Imprint</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="download (9).jpeg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="download (10).jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="download 11.png" alt="YouTube"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="download (1).png" alt="LinkedIn"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="download.png" alt="Twitter"></a>
+    </div>
+    <div class="copyright">
+        <a href="#"></a>
+    </div>
+</footer>
+
+
+    <script>
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Video play functionality
+        function playVideo() {
+            alert('Video would play here. In a real implementation, this would launch a BMW promotional video.');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+            }
+        });
+
+        // Car card hover effects
+        document.querySelectorAll('.car-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Configure button interactions
+        document.querySelectorAll('.configure-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const carName = e.target.closest('.car-card').querySelector('.car-name').textContent;
+                alert(`Configure your ${carName}! This would open the BMW configurator.`);
+            });
+        });
+        // Video play functionality
+function playVideo() {
+    var video = document.getElementById('bmwVideo');
+    var overlay = document.getElementById('videoOverlay');
+    video.style.display = 'block'; // Show video
+    video.play(); // Start playing
+    overlay.style.display = 'none'; // Hide the overlay
+}
+    </script>
+</body>
+</html>
